@@ -70,6 +70,7 @@ The older sample covering .NET 6 and .NET 7 is available in [another repository]
   * [Microsoft Orleans](#microsoft-orleans)
   * [Dapr](#dapr)
   * [Community Toolkits](#community-toolkits)
+  * [Other libraries](#other-libraries)
   * [Cloud and dogfooding](#cloud-and-dogfooding)
   * [Visual Studio](#visual-studio)
   * [Visual Studio Code](#visual-studio-code)
@@ -82,7 +83,8 @@ The older sample covering .NET 6 and .NET 7 is available in [another repository]
 
 ## Presentations
 
-- TODO: [May 2023, Thrive Conference 2023](./2023-05-thrive-what-is-new-in-dotnet-world.pptx)
+- [May 2023, Thrive Conference 2023](./2023-05-thrive-what-is-new-in-dotnet-world.pptx)
+- ~~TODO: [November 2023, Advanced Technology Days 18](./2023-11-atd-what-is-new-in-dotnet-world.pptx)~~
 
 ## Languages
 
@@ -156,8 +158,9 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Specification](https://github.com/dotnet/roslyn/blob/main/docs/features/interceptors.md)
   - [Nick Chapsas: The new "Interceptors" feature of C# 12 is WILD!](https://youtu.be/91xir2oUQPg)
   - [Khalid Abuhakmeh: .NET 8 Interceptors](https://khalidabuhakmeh.com/dotnet-8-interceptors)
-  - [Andrew Lock: Replacing method calss with interceptors](https://andrewlock.net/exploring-the-dotnet-8-preview-changing-method-calls-with-interceptors/)
+  - [Andrew Lock: Replacing method calls with interceptors](https://andrewlock.net/exploring-the-dotnet-8-preview-changing-method-calls-with-interceptors/)
 - `nameof` accessing instance members
+- `ref readonly` parameters
 - Inline arrays
   - [Proposal](https://github.com/dotnet/csharplang/issues/7431)
 
@@ -175,11 +178,17 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 
 #### Version 8 (.NET 8)
 
+- Announcements
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#introducing-tensor-primitives-for-net)
 - F# inline types and parameter name hints in Visual Studio
   - [Announcement](https://devblogs.microsoft.com/dotnet/fsharp-inline-hints-visual-studio/)
   - [Improved F# hints in Visual Studio](https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/)
 - New syntax for string interpolation
   - [Announcement](https://devblogs.microsoft.com/dotnet/new-syntax-for-string-interpolation-in-fsharp/)
+- New `while!` keyword
+  - [Announcement](https://devblogs.microsoft.com/dotnet/simplifying-fsharp-computations-with-the-new-while-keyword/)
+- Graph-based type-checking - a new compiler feature
+  - [Announcement](https://devblogs.microsoft.com/dotnet/a-new-fsharp-compiler-feature-graphbased-typechecking/)
 
 ### Visual Basic
 
@@ -247,6 +256,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [ByteHide blog](https://www.bytehide.com/blog/category/news/dotnet-news)
   - [Tim Anderson: Microsoft .NET 8 gets November release date, devs hope for stable MAUI](https://devclass.com/2023/08/03/microsoft-net-8-gets-november-release-date-devs-hope-for-stable-maui/)
   - [What's new in .NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8)
+  - [Stephen Cleary: `ConfigureAwait` in .NET 8](https://blog.stephencleary.com/2023/11/configureawait-in-net-8.html)
 - Native AOT
   - Reduced size of the single file apps
   - Console template has out of the box support for Native AOT with `dotnet new console --aot`
@@ -277,6 +287,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#introducing-time-abstraction)
   - [Steven Giesel: Time abstractions in .NET 8](https://steven-giesel.com/blogPost/4d5b70fe-35c1-43c7-bebe-49194195ffcb)
   - [Nick Chapsas: Microsoft fixed the "time" issue AGAIN in .NET 8](https://youtu.be/acjCxNlWpJQ)
+  - [Andrew Lock: Avoiding flaky tests with TimeProvider and ITimer](https://andrewlock.net/exploring-the-dotnet-8-preview-avoiding-flaky-tests-with-timeprovider-and-itimer/)
 - Hardware intrinsic improvements
   - Performance optimization and hardware acceleration for Vector and matrix operations
   - `System.Numerics` and `System.Runtime.Intrinsics`
@@ -316,12 +327,16 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#keyed-services-support-in-microsoft-extensions-dependencyinjection)
   - [Andrew Lock: Keyed service dependency injection container support](https://andrewlock.net/exploring-the-dotnet-8-preview-keyed-services-dependency-injection-support/)
   - [Nick Chapsas: Dependency injection is now complete in .NET 8](https://youtu.be/Go0HZL3vcuc?si=fZ7l_K1m_ctspITd)
-- HTTPS proxy
+- HTTPS proxy with HttpClient
   - I.e. protection against [interception (man in the middle) attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#https-proxy)
 - Struct physical promotion
   - Optimization in JIT that replaces the fields of struct variables by primitive variables
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#struct-physical-promotion)
+- Cross-building Windows apps with Win32 resources on non-Windows
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#cross-building-windows-apps-with-win32-resources-on-non-windows)
+- New package READMEs for .NET libraries
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#new-package-readmes-for-net-librariesa)
 
 ### `System.Text.Json`
 
@@ -354,6 +369,9 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 
 #### .NET 8
 
+- Blog posts and announcements
+  - [Richard Lander: The convenience of `System.Text.Json`](https://devblogs.microsoft.com/dotnet/the-convenience-of-system-text-json/)
+  - [Eirik Tsarpalis: What's new in `System.Text.Json` in .NET 8](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/)
 - Improvements
   - Missing member handling - `JsonUnmappedMemberHandling` - [Sample](./src/LibraryApis/DotNet8/JsonMissingMembersHandlingSample.cs)
   - Source generator support for `required` and `init` properties
@@ -364,19 +382,33 @@ A new proposals for C# features are available in [the C# language GitHub reposit
     - Not all serialization options are supported - i.e., dynamic types are not
   - JSON contract customization improvements
     - New `IJsonTypeInfoResolver.WithAddedModifier` extension method
+  - Improvements for combining source generators - `JsonSerializerOptions.TypeInfoResolverChain`
   - Unspeakable types support - i.e., local functions
   - Support for `Memory<T>` and `ReadOnlyMemory<T>` types
   - Support for `Half`, `Int128` and `UInt128` types
   - Extending `JsonIncludeAttribute` and `JsonConstructorAttribute` to non-public members
+  - An option to disable reflection defaults
+  - `System.Net.Http.Json` extensions for `IAsyncEnumerable`
+  - `JsonNode.ParseAsync` APIs
+  - `JsonSerializerOptions.MakeReadOnly(bool populateMissingResolver)` for setting options as readonly
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-1/#json-improvements)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#system-text-json-improvements)
   - [Announcement 3](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-6/#system-text-json-improvements)
   - [Announcement 4](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#system-text-json-improvements)
+  - [Announcement 5](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/)
+  - [Announcement 6](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#system-text-json-improvements)
 - Populating read-only members
-  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#system-text-json-populating-read-only-members)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#system-text-json-populating-read-only-members)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/#populate-read-only-members)
 - New converter - `JsonStringEnumConverter<TEnum>`
   - Supports Native AOT
-  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-6/#jsonstringenumconvertertenum)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-6/#jsonstringenumconvertertenum)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/#jsonstringenumconvertertenum)
+- Single-usage `JsonSerializerOptions` analyzer
+  - [Announcement](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/#single-usage-jsonserializeroptions-analyzer)
+- Additional `JsonNode` functionality
+  - I.e., Deep Cloning, parsing from a stream,...
+  - [Announcement](https://devblogs.microsoft.com/dotnet/system-text-json-in-dotnet-8/#additional-jsonnode-functionality)
 
 ### .NET SDK
 
@@ -444,11 +476,17 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - New Alpine ASP.NET Docker composite images
   - New Jammy Chiseled and Mariner Distroless Docker composite images
   - Publishing images to Docker Hub via `dotnet publish` works as expected with `docker.io` registry
+  - Container publishing now supports Azure Managed Identity
+  - Container publishing now supports publishing to tar.gz archive
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-1/#net-container-images)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-1/#net-8-ubuntu-chiseled-container-images)
   - [Announcement 3](https://devblogs.microsoft.com/dotnet/securing-containers-with-rootless/)
   - [Announcement 4](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-5/#alpine-asp-net-docker-composite-images)
   - [Announcement 5](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#containers)
+  - [Announcement 6](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#sdk-container-publishing-now-supports-azure-managed-identity)
+  - [Andrew Lock: Updates to Docker images in .NET 8](https://andrewlock.net/exploring-the-dotnet-8-preview-updates-to-docker-images-in-dotnet-8/)
+  - [Announcement 7](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#sdk-container-publish-publish-to-tar-gz-archive)
+  - [Laurent Kempe: Simplify your .NET Docker image publishing workflow with the .NET SDK](https://laurentkempe.com/2023/10/24/simplify-your-dotnet-docker-image-publishing-workflow-with-the-dotnet-sdk/)
 - Expanded support for building containers from .NET CLI
   - This is actually available in .NET 7.0.200 SDK, but mentioning it here as it was not included in the initial .NET 7 release
   - Registry authentication
@@ -466,6 +504,13 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - Dynamic profile guided optimization (PGO) is enabled by default
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#codegen)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-5/#codegen)
+- Debugging enhancements
+  - For `HttpContext`, request, responses, gRPC, `IConfiguration`, logging, etc.
+  - [Announcement](https://devblogs.microsoft.com/dotnet/debugging-enhancements-in-dotnet-8/)
+- MSBuild: Simple CLI-based project evaluation with `dotnet publish --getProperty:Xyz`
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#msbuild-simple-cli-based-project-evaluation)
+- Tensor primitives in `System.Numerics.Tensor`
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#introducing-tensor-primitives-for-net)
 
 ### Tools
 
@@ -487,6 +532,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 
 - [Olia Gavrysh: Upgrading your .NET projects with Visual Studio](https://devblogs.microsoft.com/dotnet/upgrade-assistant-now-in-visual-studio/)
 - [Olia Gavrysh: Announcing an update for .NET Upgrade Assistant with a new CLI tool!](https://devblogs.microsoft.com/dotnet/upgrade-assistant-cli/)
+- [Olia Gavrysh: New .NET Upgrade Assistant version with feature updates and .NET MAUI improvements!](https://devblogs.microsoft.com/dotnet/upgrade-assistant-august-2023-update)
 - Hot Reload supports modifying generics
   - [Announcement](https://devblogs.microsoft.com/dotnet/hot-reload-generics/)
 - NuGet 6.7
@@ -528,7 +574,11 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 ### .NET 8
 
 - Announcements and blog posts
+  - [Stephen Toub: Performance improvements in .NET 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
+  - [Kristoffer Strube: Reading notes from Performance Improvements in .NET 8](https://kristoffer-strube.dk/post/reading-notes-from-performance-improvements-in-dotnet-8/)
+  - [Rico Mariani: Performance improvement in .NET 8](https://ricomariani.medium.com/performance-improvements-in-net-8-f673e805e09e)
   - [Steven Giesel: .NET 8 performance edition](https://steven-giesel.com/blogPost/f6504300-7bf0-48d2-8a14-ba4e2bbea02e)
+  - [Kunal Pathak: Arm64 Performance Improvements in .NET 8](https://devblogs.microsoft.com/dotnet/this-arm64-performance-in-dotnet-8/)
 
 ## Entity Framework Core
 
@@ -570,6 +620,12 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-ef8-preview-2/#sql-server-hierarchyid)
 - Translating LINQ Contains to OpenJson query
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-ef8-preview-4/)
+- Complex types as value objects
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-ef8-rc1/#complex-types-as-value-objects)
+- A lot of smaller improvements
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-ef8-rc2/#better-executeupdate-and-executedelete)
+- A new MongoDB provider for EF Core - maintained by MongoDB
+  - [Announcement](https://devblogs.microsoft.com/dotnet/efcore-mongodb/)
 
 ## ASP.NET Core
 
@@ -624,7 +680,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 - [Sample](https://github.com/miroslavpopovic/minimal-apis-sample)
 - `IEndpointFilter` support
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-preview-3/#support-for-route-handler-filters-in-minimal-apis) - before rename
-  - [Announcement 2]()
+  - [Announcement 2](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0#filters-in-minimal-api-apps)
 - `IFormFile` and `IFormFileCollection`
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-7-preview-1/#minimal-api-improvements)
 - Binding to `Stream` or `PipeReader`
@@ -660,6 +716,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [ASP.NET Core Roadmap for .NET 8](https://github.com/dotnet/aspnetcore/issues/44984)
   - [Tim Anderson: Is ASP.NET on the right path?](https://devclass.com/2023/05/18/is-asp-net-on-the-right-path-microsoft-net-8-preview-prompts-debate-and-visual-studio-17-6-rolls-out/)
   - [ByteHide: ASP.NET Core in .NET 8 is on the way! Discover the NEW features!](https://dev.to/bytehide/aspnet-core-in-net-8-is-on-the-way-discover-the-new-features-3k86)
+  - [Brennan Conroy: Performance Improvements in ASP.NET Core 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-8/)
 - Improved authentication & authorization experience
   - Removal of Duende IdentityServer from templates
   - Improved auth for self-hosting solutions
@@ -675,12 +732,17 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement 3](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#authentication-and-authorization)
   - [Announcement 4](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-7/#identity)
   - [David Fowler's identity endpoints sample](https://github.com/davidfowl/IdentityEndpointsSample)
+  - [Andrew Lock: Introducing the Identity API endpoints](https://andrewlock.net/exploring-the-dotnet-8-preview-introducing-the-identity-api-endpoints/)
+  - [Andrew Lock: Should you use the .NET 8 Identity API endpoints?](https://andrewlock.net/should-you-use-the-dotnet-8-identity-api-endpoints/)
+  - [Andrew Lock: Can you use the .NET 8 Identity API endpoints with IdentityServer?](https://andrewlock.net/can-you-use-the-dotnet-8-identity-api-endpoints-with-identityserver/)
+  - [Jeremy Likness: What's new with identity in .NET 8]()https://devblogs.microsoft.com/dotnet/whats-new-with-identity-in-dotnet-8/
 - Support for Native AOT
   - Only a partial support, available for [some templates](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3/#native-aot-ready-project-templates)
   - [Top-level APIs annotated for trim warnings](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#asp-net-core-top-level-apis-annotated-for-trim-warnings)
   - [Reduced app size with configurable HTTPS support](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#reduced-app-size-with-configurable-https-support)
   - [Worker Service template received AOT support](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#reduced-app-size-with-configurable-https-support)
   - [Full TrimMode is used for web projects compiled with trimming enabled](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-7/#full-trimmode-is-used-for-web-projects-compiled-with-trimming-enabled)
+  - [Trim .NET IL after ahead-of-time compilation](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#trim-net-il-after-ahead-of-time-aot-compilation)
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-1/#native-aot)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3/#asp-net-core-support-for-native-aot)
   - [Announcement 3](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#native-aot)
@@ -725,6 +787,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - `app.MapGet("/", () => "Hello World!").ShortCircuit();` - define a route to short circuit
   - `app.MapShortCircuit(404, "robots.txt", "favicon.ico");` - define endpoints and status codes to short circuit
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3/#short-circuit-routes)
+  - [Andrew Lock: Short-circuit routing in .NET 8](https://andrewlock.net/exploring-the-dotnet-8-preview-short-circuit-routing/)
 - New analyzers for API development
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-1/#new-analyzers-for-api-development)
 - New analyzer to detect multiple `[FromBody]` attributes
@@ -734,10 +797,13 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 - New Visual Studio templates
   - For Angular, React, and Vue
   - Built on the new JavaScript project system (.esproj) and integrate with ASP.NET Core backend project
-  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-7/#new-visual-studio-templates)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-7/#new-visual-studio-templates)
+  - [Announcement 2](https://devblogs.microsoft.com/visualstudio/new-react-typescript-spa-templates-and-more/)
+  - [Announcement 3](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#standard-net-template-options)
+  - [Announcement 4](https://devblogs.microsoft.com/visualstudio/new-react-typescript-spa-templates-and-more/)
 - Kestrel and HttpSys connection improvements
   - Support for named pipes in Kestrel
-  - HTTP/3 enabled by default
+  - [HTTP/3 ~~enabled~~ disabled by default](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#http-3-disabled-by-default)
   - HTTP/2 over TLS (HTTPS) support on macOS
   - New `HTTP_PORTS` and `HTTPS_PORTS` configuration options
   - HTTP.sys kernel response buffering
@@ -767,6 +833,10 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#redis-based-output-caching)
 - `System.Web.Adapters` for migration from ASP.NET to ASP.NET Core
   - [Announcement](https://devblogs.microsoft.com/dotnet/systemweb-adapters-1_2/)
+- Support for keyed services in Minimal APIs, MVC, and SignalR
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#support-for-keyed-services-in-minimal-apis-mvc-and-signalr)
+- Support for form files in new form binding
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#support-for-form-files-in-new-form-binding)
 
 #### Minimal APIs
 
@@ -783,6 +853,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#expanded-support-for-form-binding-in-minimal-apis)
 - Complex form binding support
     - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#complex-form-binding-support-in-minimal-apis)
+    - [Andrew Lock: Form binding in Minimal APIs](https://andrewlock.net/exploring-the-dotnet-8-preview-form-binding-in-minimal-apis/)
 - API project template includes `.http` file (available for any API project)
   - [Sample](https://github.com/miroslavpopovic/minimal-apis-sample/blob/main/src/MinimalApis.MinimalSample/api.http)
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#api-project-template-includes-http-file)
@@ -797,6 +868,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-1/#specify-server-timeout-and-keep-alive-interval-settings-using-the-hubconnectionbuilder)
 - SignalR seamless reconnect
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#signalr-seamless-reconnect)
+- TypeScript client stateful reconnect support
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#support-for-form-files-in-new-form-binding)
 
 ## Blazor
 
@@ -844,6 +917,9 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Jon Hilton: Big changes coming for Blazor in .NET 8](https://www.telerik.com/blogs/big-changes-coming-blazor-dotnet-8)
   - [Jon Hilton: Interactive components using Blazor WASM](https://jonhilton.net/blazor-interactive-wasm/)
   - [Jon Hilton: Capture user input with forms](https://jonhilton.net/blazor-ssr-forms/)
+  - [Jon Hilton: How to migrate your Blazor Server apps to .NET 8](https://jonhilton.net/blazor-net8-migration/)
+  - [Jon Hilton: .NET 8's Release Candidate Delivers a Smoother 'Out-of-the-Box' Experience for Blazor](https://www.telerik.com/blogs/net-8-release-candidate-delivers-smoother-out-box-experience-blazor)
+  - [Rockford Lhotka: Flowing State in Blazor 8](https://blog.lhotka.net/2023/10/27/Flowing-State-in-Blazor-8)
 - (Just) Blazor
   - Previously "Blazor United" or "Full stack web UI with Blazor"
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-1/#full-stack-web-ui-with-blazor)
@@ -856,13 +932,15 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Blazor router integration with endpoint routing](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#blazor-router-integration-with-endpoint-routing)
   - [Enable interactivity for individual components](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#enable-interactivity-for-individual-components-with-blazor-server)
   - [Form model binding & validation](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#form-model-binding-validation-with-server-side-rendering)
+  - [Steven Giesel: .NET 8 and Blazor United / Server-side rendering](https://steven-giesel.com/blogPost/3c71e553-490f-4d52-8104-eb8338c0207f)
 - Streaming rendering with Blazor components
   - Needs `[StreamRendering(true)]` on the component
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#streaming-rendering-with-blazor-components)
 - Specify component render mode at the call site
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#specify-component-render-mode-at-the-call-site)
 - Interactive rendering with Blazor WebAssembly
-  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#interactive-rendering-with-blazor-webassembly)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#interactive-rendering-with-blazor-webassembly)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#global-interactivity-for-blazor-web-apps)
 - Auto render mode
   - Uses WebAssembly if it can be loaded quickly (within 100ms)
     - i.e., if runtime is previously downloaded and cached, or if on high speed network
@@ -872,6 +950,9 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - I.e., to a string or stream
   - Example use case: generate emails, static site content, etc.
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3/#render-razor-components-outside-of-asp-net-core)
+  - [Andrew Lock: Rendering Blazor components to a string](https://andrewlock.net/exploring-the-dotnet-8-preview-rendering-blazor-components-to-a-string/)
+- File scoped `@rendermode` Razor directove
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#file-scoped-rendermode-razor-directive)
 - Support for Sections in Blazor
   - `SectionOutlet` and `SectionContent` components
   - Can be used as placeholders in layout that are filled in by specific pages
@@ -882,6 +963,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#route-to-named-elements-in-blazor)
 - Cascade query string values to Blazor components
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#cascade-query-string-values-to-blazor-components)
+- Access HttpContext as a cascading parameter
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#access-httpcontext-as-a-cascading-parameter)
 - Register root-level cascading values
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-7/#register-root-level-cascading-values)
 - Antiforgery integration
@@ -910,15 +993,37 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - Useful when AOT compiler is not an option, but can optimize AOT performance too
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-2/#improved-blazor-webassembly-performance-with-the-jiterpreter)
 - New Blazor Web App project template
-  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#new-blazor-web-app-project-template)
+  - [Design Discussion](https://github.com/dotnet/aspnetcore/issues/49079)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#new-blazor-web-app-project-template)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#blazor-web-app-template-updates)
 - Blazor router integration with endpoint routing
   - Routing with server-side rendering works just like it does with client-side rendering
-  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#blazor-router-integration-with-endpoint-routing)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#blazor-router-integration-with-endpoint-routing)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#routing-improvements)
 - Content Security Policy (CSP) compatibility
   - No longer requires `unsafe-eval`
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-5/#blazor-content-security-policy-csp-compatibility)
 - `HybridGlobalization` mode on WASM
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-6/#hybridglobalization-mode-on-wasm)
+- `WasmStripILAfterAOT` mode on WASM
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#wasmstripilafteraot-mode-on-wasm)
+- Discover components from additional assemblies for static server rendering
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#discover-components-from-additional-assemblies-for-static-server-rendering)
+- Trigger a page refresh from navigation
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#trigger-a-page-refresh)
+- Enhanced navigation & form handling improvements
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#enhanced-navigation-form-handling-improvements)
+- Form model binding improvements
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#form-model-binding-improvements)
+- Persist component state in a Blazor Web API
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#persist-component-state-in-a-blazor-web-app)
+- Support for dialog cancel and close events
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#support-for-dialog-cancel-and-close-events)
+- Error page support
+  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#error-page-support)
+- Blazor Identity UI
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-2/#blazor-identity-ui)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/whats-new-with-identity-in-dotnet-8/#the-blazor-identity-ui)
 
 ## MAUI
 
@@ -953,11 +1058,16 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Roadmap](https://github.com/dotnet/maui/wiki/Roadmap)
   - [Announcing .NET MAUI in .NET 8 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-5/)
   - [Announcing .NET MAUI in .NET 8 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-6/)
-  - [Announcing .NET MAUI in .NET 8 Preview 7: Keyboard accelerators](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-7/)
+  - [Announcing .NET MAUI in .NET 8 Preview 7: Keyboard accelerators](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-7/)]
   - [Tim Anderson: Microsoft releases new preview of MAUI with 'lots of bug fixes' but quality concerns linger](https://devclass.com/2023/06/15/microsoft-releases-new-preview-of-maui-with-lots-of-bug-fixes-but-quality-concerns-linger/)
+  - [Announcing .NET MAUI in .NET 8 Release Candidate 1: Quality](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-rc-1/)
+  - [Jonathan Peppers: .NET 8 Performance Improvements in .NET MAUI](https://devblogs.microsoft.com/dotnet/dotnet-8-performance-improvements-in-dotnet-maui/)
+  - [David Ramel: New .NET MAUI Docs Detail How to Migrate from Xamarin.Forms](https://visualstudiomagazine.com/articles/2023/10/06/net-maui-docs.aspx)
 - Improving quality - resolving issues, merging pull requests
   - Most attention was given to `CollectionView`, `Shell` and drawing (shapes, shadows, clipping)
-  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-3/#improving-quality)
+  - Memory leak resolutions, UI control enhancements, platform specific fixes, performance optimizations
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-3/#improving-quality)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-rc-1/#quality-improvements)
 - Improving memory management
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-3/#improving-memory-management)
 - New version of .NET Upgrade Assistant supports Xamarin.Forms upgrade to .NET MAUI
@@ -973,6 +1083,10 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 - New Visual Studio Code extension for .NET MAUI
   - [Announcement 1](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-preview-6/#introducing-vs-code-preview)
+- `AndroidStripILAfterAOT` mode on Android
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#androidstripilafteraot-mode-on-android)
+- XCode 15 support
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-rc-1/#xcode-15-support)
 
 ## gRPC
 
@@ -1031,8 +1145,12 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 
 #### .NET 8
 
+- Blog posts and announcements
+  - [Dipesh Kumar: WPF File Dialog Improvements in .NET 8](https://devblogs.microsoft.com/dotnet/wpf-file-dialog-improvements-in-dotnet-8/)
 - `OpenFolderDialog`
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/#openfolderdialog-in-wpf)
+- WPF Hardware Acceleration in RDP
+  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#wpf-hardware-acceleration-in-rdp)
 
 ## Monitoring and metrics
 
@@ -1053,7 +1171,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 - Testing metrics in ASP.NET Core apps using `IMeterFactory` and `MetricCollector<T>`
   - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#testing-metrics-in-asp-net-core-apps)
 - New, improved and renamed counters
-  - [Announcement](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#new-improved-and-renamed-counters)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-6/#new-improved-and-renamed-counters)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#metrics)
 
 ## CoreWCF
 
@@ -1083,6 +1202,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://github.com/CoreWCF/CoreWCF/releases/tag/v1.3.0)
 - 1.4 brings support for Named Pipes and Queue transports
   - [Announcement](https://github.com/CoreWCF/CoreWCF/releases/tag/v1.4.0-preview1)
+  - [Almir Vuk: CoreWCF 1.4.0 Released - RabbitMQ and Apache Kafka support added](https://www.infoq.com/news/2023/09/corewcf-140-released/)
 - .NET Upgrade Assistant is able to migrate WCF services to CoreWCF
   - [Announcement](https://devblogs.microsoft.com/dotnet/migration-wcf-to-corewcf-upgrade-assistant/)
 - Client support for calling WCF/CoreWCF with `System.ServiceModel` 6.0 is available
@@ -1191,12 +1311,16 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 
 - Source code generators
   - [Bnaya Eshet: Unleashing the power of .NET source code generators](https://medium.com/@bnayae/unleashing-the-power-of-net-source-code-generators-3115156df775)
+  - [Bnaya Eshet: Source Code Generators, DIY](https://blog.stackademic.com/source-code-generators-diy-f04229c59e1a)
   - Refit: Automatic type-safe REST library
   - Dunet: Discriminated unions generator
   - Mapperly: object mappings
   - Generator.Equals: IEquatable<T> Generator
+  - [Bart Wullems: Source Generator playground](https://bartwullems.blogspot.com/2023/10/source-generator-playground.html)
 - Sisk
   - [Khalid Abuhakmeh: Sisk - An Alternative .NET HTTP Server](https://khalidabuhakmeh.com/sisk-an-alternative-dotnet-http-server)
+- Polly
+  - [Polly v8 officially released](https://www.thepollyproject.org/2023/09/28/polly-v8-officially-released/)
 
 ## Cloud and dogfooding
 
@@ -1228,6 +1352,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Jordan Matthiesen: Visual Studio 2022 for Mac is now available](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/)
   - [Kaitlin Brooks, Cherry Wang, Dante Gagne: Visual Studio UI refresh](https://devblogs.microsoft.com/visualstudio/visual-studio-ui-refresh/)
   - [Dalia Abo Sheasha: New in Visual Studio: Compare files with Solution Explorer](https://devblogs.microsoft.com/visualstudio/new-in-visual-studio-compare-files-with-solution-explorer/)
+  - [Mads Kristensen: Working with images just got easier in Visual Studio](https://devblogs.microsoft.com/visualstudio/working-with-images-just-got-easier-in-visual-studio/)
+  - [Anthony Cangialosi: Visual Studio for Mac Retirement Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-retirement-announcement/)
 - Visual Studio 2022 17.1
   - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-1-is-now-available/)
   - Faster code search with indexed Find in files
@@ -1288,6 +1414,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-6-performance-enhancements/)
   - Performance improvements for solution open, close, git file history, git branch switch, lightbulb actions, performance profiler
   - [All-in-one search](https://devblogs.microsoft.com/visualstudio/all-in-one-search-available-in-17-6/)
+  - [New T4 Command-Line Tool for .NET](https://devblogs.microsoft.com/dotnet/t4-command-line-tool-for-dotnet/)
 - Visual Studio 2022 17.7 Preview 1
   - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-7-preview-1-is-here/)
   - Comparing files in Solution Explorer
@@ -1325,6 +1452,28 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - Code actions for event handler method generation in Razor code
   - New React TypeScript and ASP.NET combined templates
   - New IntelliTest is now in preview
+- Visual Studio 2022 17.8 Preview 2
+  - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-2-has-arrived/)
+  - Git improvements
+    - Edit your Pull Request Descriptions with Markdown
+    - Summary Diff improvements
+    - GitHub Avatars added to Git Repository Window
+    - Multi-Repo Activation Setting
+  - Safe use of secrets when working with HTTP files and HTTP requests
+    - [Announcement](https://devblogs.microsoft.com/visualstudio/safely-use-secrets-in-http-requests-in-visual-studio-2022/)
+  - Recognizing `.vscode/launch.json` files for debugging
+  - F# editor improvements like new code fixes and improved autocompletion
+  - Debugging and diagnostics improvements
+    - Cross platform edit and continue / Hot Reload debugging support (Docker, WSL)
+    - Docker Linux app services with Attach to Process
+    - Support for BenchmarkDotNet IDiagnosers in Visual Studio Profiler
+    - .NET counter support for new instruments via Meters API
+    - Test profiling with VS Profiler
+    - Enterprise management of VS Installer
+- Visual Studio 2022 17.8 Preview 3
+  - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-3-is-here/)
+  - Update notification
+  - Upgraded Microsoft.Data.SQLClient from 3.0 to 5.0 in SQL Server Data Tools
 
 ## Visual Studio Code
 
@@ -1340,7 +1489,9 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - C# extension enhanced - OmniSharp
   - IntelliCode for C# Dev Kit
   - .NET Runtime Install Tool
-  - [Announcement](https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/)
+  - [Announcement 1](https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/)
+  - [Announcement 2](https://devblogs.microsoft.com/dotnet/csharp-dev-kit-now-generally-available/)
+  - [Scott Hanselman: The C# DevKit is out and gives you a complete .NET experience inside VS Code!](https://youtu.be/6BNtIxW0-xQ?si=_jbJ4dvsguiGCAFe)
 - .NET MAUI extension
   - [Announcement](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/)
 
