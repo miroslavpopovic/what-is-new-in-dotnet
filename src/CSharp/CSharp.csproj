@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
+        <Features>InterceptorsPreview</Features>
+        <InterceptorsPreviewNamespaces>$(InterceptorsPreviewNamespaces);CSharp.Version12</InterceptorsPreviewNamespaces>
     </PropertyGroup>
 
 </Project>

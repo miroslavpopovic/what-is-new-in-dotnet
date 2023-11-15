@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp", "src\CSharp\CSharp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApis", "src\LibraryApis\LibraryApis.csproj", "{A13F419D-FB54-44AA-A20C-2128EBEB3C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeAotEnabled", "src\NativeAotEnabled\NativeAotEnabled.csproj", "{562900EB-96BC-46D4-BE81-BF49550B5319}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeConsoleApp", "src\NativeConsoleApp\NativeConsoleApp.csproj", "{562900EB-96BC-46D4-BE81-BF49550B5319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,6 +11,8 @@
         <!--<OptimizationPreference>Speed</OptimizationPreference>-->
 
         <InvariantGlobalization>true</InvariantGlobalization>
+
+        <RootNamespace>NativeAotEnabled</RootNamespace>
     </PropertyGroup>
 
 </Project>

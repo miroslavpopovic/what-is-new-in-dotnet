@@ -35,4 +35,10 @@ AliasAnyTypeSample.Run();
 Console.WriteLine("12-03. Optional and parameter array parameters for lambdas and method groups");
 LambdaParametersSample.Run();
 
-Console.Read();
+Console.WriteLine("12-04. Collection expressions");
+CollectionLiteralsSample.Run();
+
+Console.WriteLine("12-05. Interceptors (experimental)");
+InterceptorsSample.Run();
+
+//Console.Read();

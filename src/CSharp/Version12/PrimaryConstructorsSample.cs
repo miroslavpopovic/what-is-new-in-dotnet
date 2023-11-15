@@ -14,7 +14,7 @@ public static class PrimaryConstructorsSample
             $"USER: Name = {name}, Age = {age}, Active = {isActive}, Address = {Address}";
     }
 
-    public struct Address(string address, string city, int zip, string state)
+    public readonly struct Address(string address, string city, int zip, string state)
     {
         // For structs, implicit parameterless constructor is always emitted, but you can override it
         //public Address() : this("N/A", "N/A", 0, "N/A")

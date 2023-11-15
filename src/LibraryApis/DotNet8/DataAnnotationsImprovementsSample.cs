@@ -5,7 +5,7 @@ namespace LibraryApis.DotNet8;
 
 public class Person
 {
-    [Required(DisallowAllDefaultValues = true)]
+    [Required(AllowEmptyStrings = false)]
     public Guid Id { get; set; }
 
     [Length(5, 50)]
