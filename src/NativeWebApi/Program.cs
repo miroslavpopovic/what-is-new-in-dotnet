@@ -1,8 +1,11 @@
 using System.Text.Json.Serialization;
+using NativeWebApi.Data;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
 builder.AddServiceDefaults();
+
+builder.AddSqlServerDbContext<ApiDbContext>("sqldata");
 
 builder.Services.ConfigureHttpJsonOptions(options =>
 {

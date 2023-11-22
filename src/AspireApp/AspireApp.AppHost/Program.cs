@@ -1,6 +1,11 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.NativeWebApi>("nativewebapi");
+var sql = builder
+    .AddSqlServerContainer("sql")
+    .AddDatabase("sqldata");
+
+builder.AddProject<Projects.NativeWebApi>("nativewebapi")
+    .WithReference(sql);
 
 builder.AddProject<Projects.BlazorApp>("blazorapp");
 
