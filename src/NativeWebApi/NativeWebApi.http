@@ -1,0 +1,11 @@
+@NativeWebApi_HostAddress = http://localhost:5145
+
+GET {{NativeWebApi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{NativeWebApi_HostAddress}}/todos/1
+Accept: application/json
+
+###

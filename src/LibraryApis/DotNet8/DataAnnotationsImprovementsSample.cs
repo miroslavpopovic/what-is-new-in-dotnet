@@ -9,19 +9,19 @@ public class Person
     public Guid Id { get; set; }
 
     [Length(5, 50)]
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     [AllowedValues("HR", "Development", "Management")]
-    public string Department { get; set; }
+    public required string Department { get; set; }
 
     [DeniedValues("iPhone", "iPad")]
-    public string DefaultDevice { get; set; }
+    public required string DefaultDevice { get; set; }
 
     [Range(1000, 10000, MinimumIsExclusive = true, MaximumIsExclusive = true)]
-    public decimal Sallary { get; set; }
+    public decimal Salary { get; set; }
 
     [Base64String]
-    public string ProfileImage { get; set; }
+    public required string ProfileImage { get; set; }
 }
 
 public static class DataAnnotationsImprovementsSample
@@ -35,7 +35,7 @@ public static class DataAnnotationsImprovementsSample
             Department = "HR",
             Name = "John Smith",
             ProfileImage = Convert.ToBase64String("Some valid image..."u8.ToArray()),
-            Sallary = 1500
+            Salary = 1500
         };
 
         var invalidPerson = new Person
@@ -45,7 +45,7 @@ public static class DataAnnotationsImprovementsSample
             Department = "Transportation",
             Name = "Ben",
             ProfileImage = "Some invalid image...",
-            Sallary = 1000
+            Salary = 1000
         };
 
         var errors = GetValidationErrors(validPerson);

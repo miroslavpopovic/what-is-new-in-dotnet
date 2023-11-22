@@ -1,18 +1,19 @@
 ﻿namespace CSharp.Version11;
 
 // Up to C# 10
-public class TypeAttribute : Attribute
+[AttributeUsage(AttributeTargets.Class)]
+public class TypeAttribute(Type type) : Attribute
 {
-    public TypeAttribute(Type type) => Type = type;
-    public Type Type { get; }
+    public Type Type { get; } = type;
 }
 
 // C# 11
-public class GenericTypeAttribute<T> : Attribute { }
+[AttributeUsage(AttributeTargets.Class)]
+public class GenericTypeAttribute<T> : Attribute;
 
 [Type(typeof(string))]
 [GenericType<string>]
-public class AttributedClass { }
+public class AttributedClass;
 
 public static class GenericAttributesSample
 {

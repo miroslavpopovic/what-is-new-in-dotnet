@@ -1,4 +1,5 @@
-﻿namespace CSharp.Version12;
+﻿// ReSharper disable ConvertToLocalFunction
+namespace CSharp.Version12;
 
 public static class LambdaParametersSample
 {

@@ -1,4 +1,5 @@
-﻿// ReSharper disable once CheckNamespace
+﻿#pragma warning disable CS9113 // Parameter is unread.
+// ReSharper disable once CheckNamespace
 namespace System.Runtime.CompilerServices;
 
 [AttributeUsage(AttributeTargets.Method)]
