@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApis", "src\LibraryA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NativeConsoleApp", "src\NativeConsoleApp\NativeConsoleApp.csproj", "{562900EB-96BC-46D4-BE81-BF49550B5319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireApp.AppHost", "src\AspireApp\AspireApp.AppHost\AspireApp.AppHost.csproj", "{FD269493-ECD7-4F18-8282-7F58B1F46265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.AppHost", "src\AspireApp\AspireApp.AppHost\AspireApp.AppHost.csproj", "{FD269493-ECD7-4F18-8282-7F58B1F46265}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.ServiceDefaults", "src\AspireApp\AspireApp.ServiceDefaults\AspireApp.ServiceDefaults.csproj", "{16D54820-3A4F-4D33-A4FA-219838BD3A8E}"
 EndProject

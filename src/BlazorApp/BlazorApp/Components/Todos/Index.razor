@@ -1,0 +1,53 @@
+﻿@page "/todos"
+@rendermode InteractiveServer
+
+@attribute [StreamRendering]
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+@inject TodoHttpClient TodoHttpClient
+
+<PageTitle>Todo Items</PageTitle>
+
+<h1>Todo Items</h1>
+
+@if (_todos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="page-size-chooser">
+        Items per page:
+        <select @bind="@_pagination.ItemsPerPage">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+        </select>
+    </div>
+
+    <QuickGrid Items="@_todos" TGridItem="Todo" Pagination="@_pagination">
+        <PropertyColumn Property="@(t => t.Id)" Sortable="true" />
+        <PropertyColumn Property="@(t => t.Title)" Sortable="true" />
+        <TemplateColumn Title="Completed">
+            <input type="checkbox" @checked="@context.IsComplete" disabled="disabled" />
+        </TemplateColumn>
+        <PropertyColumn Property="@(t => t.DueBy)" Format="yyyy-MM-dd" Sortable="true" />
+        <TemplateColumn Title="Operations">
+            <button class="btn btn-light">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+        </TemplateColumn>
+    </QuickGrid>
+    
+    <Paginator State="@_pagination" />
+}
+
+@code {
+    private IQueryable<Todo>? _todos;
+    private readonly PaginationState _pagination = new() { ItemsPerPage = 5 };
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _todos = (await TodoHttpClient.GetTodosAsync()).AsQueryable();
+    }
+}

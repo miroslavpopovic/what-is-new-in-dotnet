@@ -4,9 +4,9 @@ var sql = builder
     .AddSqlServerContainer("sql")
     .AddDatabase("sqldata");
 
-builder.AddProject<Projects.NativeWebApi>("nativewebapi")
-    .WithReference(sql);
+var apiProject = builder.AddProject<Projects.NativeWebApi>("nativewebapi");
 
-builder.AddProject<Projects.BlazorApp>("blazorapp");
+builder.AddProject<Projects.BlazorApp>("blazorapp")
+    .WithReference(apiProject);
 
 builder.Build().Run();
