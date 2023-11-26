@@ -53,6 +53,7 @@ The older sample covering .NET 6 and .NET 7 is available in [another repository]
   * [gRPC](#grpc)
     * [.NET 7](#net-7-9)
     * [.NET 8](#net-8-9)
+  * [.NET Aspire](#net-aspire)
   * [Desktop](#desktop)
     * [Windows Forms](#windows-forms)
       * [.NET 7](#net-7-10)
@@ -146,6 +147,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Sample](./src/CSharp/Version12/PrimaryConstructorsSample.cs)
   - [Specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/primary-constructors)
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/#primary-constructors-on-any-class-or-struct)
+  - [Matthias Koch: Primary Constructors - Using C# 12 in Rider and ReSharper](https://blog.jetbrains.com/dotnet/2023/11/23/primary-constructors-using-csharp-12-in-rider-and-resharper/)
 - Using aliases for any type
   - [Sample](./src/CSharp/Version12/AliasAnyTypeSample.cs)
   - [Specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/using-alias-types)
@@ -314,6 +316,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Stephen Cleary: `ConfigureAwait` in .NET 8](https://blog.stephencleary.com/2023/11/configureawait-in-net-8.html)
   - [Simon Bisson: What's new and improved in Microsoft's .NET 8](https://www.infoworld.com/article/3710630/whats-new-and-improved-in-microsofts-net-8.html)
   - [Gaurav Seth: Announcing .NET 8](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/)
+  - [.NET Conf 2023 videos](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oULyHSPBx-tQzePOYlhvrAU)
 - Native AOT
   - Reduced size of the single file apps
   - Console template has out of the box support for Native AOT with `dotnet new console --aot`
@@ -521,7 +524,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - Prevents downloading packages from `http://` feeds, but allows overrides with `--force` flag
   - Signed package verification on Linux is on by default
   - Auditing NuGet package dependencies for security vulnerabilities
-  - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#template-engine-secure-experience-with-packages-from-nuget-org)
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-4/#template-engine-secure-experience-with-packages-from-nuget-org)
+  - [Anouncement 2](https://devblogs.microsoft.com/nuget/announcing-nuget-6-8-maintaining-security-with-ease/)
 - .NET Container images improvements
   - Debian 12 (Bookworm) used as a default Linux distro
   - Using Ubuntu Chiseled container images with .NET 8
@@ -544,6 +548,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Andrew Lock: Updates to Docker images in .NET 8](https://andrewlock.net/exploring-the-dotnet-8-preview-updates-to-docker-images-in-dotnet-8/)
   - [Announcement 7](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc2/#sdk-container-publish-publish-to-tar-gz-archive)
   - [Laurent Kempe: Simplify your .NET Docker image publishing workflow with the .NET SDK](https://laurentkempe.com/2023/10/24/simplify-your-dotnet-docker-image-publishing-workflow-with-the-dotnet-sdk/)
+  - [Richard Lander: Announcing .NET Chiseled Containers](https://devblogs.microsoft.com/dotnet/announcing-dotnet-chiseled-containers/)
+  - [Tim Anderson: Ubuntu chiselled containers arrive for .NET - smaller, more secure, but beware of 'sharp edges'](https://devclass.com/2023/11/23/ubuntu-chiselled-containers-arrive-for-net-smaller-more-secure-but-beware-sharp-edges/)
 - Expanded support for building containers from .NET CLI
   - This is actually available in .NET 7.0.200 SDK, but mentioning it here as it was not included in the initial .NET 7 release
   - Registry authentication
@@ -665,6 +671,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Latest news and progress on .NET 8 and EF8](https://github.com/dotnet/efcore/issues/29989)
   - [What's new in EF Core 8](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-8.0/whatsnew)
   - [Nick Chapsas: Entity Framework Core vs Dapper Performance in 2023](https://youtu.be/Q4LtKa_HTHU)
+  - [Ricardo Peres: The Current Status of EF Core](https://weblogs.asp.net/ricardoperes/the-current-status-of-ef-core)
 - Raw SQL queries for unmapped types
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-ef8-preview-1/#raw-sql-queries-for-unmapped-types)
   - [Announcement 2](https://devblogs.microsoft.com/dotnet/announcing-ef8/#raw-sql-queries-for-unmapped-types)
@@ -801,7 +808,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Andrew Lock: Introducing the Identity API endpoints](https://andrewlock.net/exploring-the-dotnet-8-preview-introducing-the-identity-api-endpoints/)
   - [Andrew Lock: Should you use the .NET 8 Identity API endpoints?](https://andrewlock.net/should-you-use-the-dotnet-8-identity-api-endpoints/)
   - [Andrew Lock: Can you use the .NET 8 Identity API endpoints with IdentityServer?](https://andrewlock.net/can-you-use-the-dotnet-8-identity-api-endpoints-with-identityserver/)
-  - [Jeremy Likness: What's new with identity in .NET 8]()https://devblogs.microsoft.com/dotnet/whats-new-with-identity-in-dotnet-8/
+  - [Jeremy Likness: What's new with identity in .NET 8](https://devblogs.microsoft.com/dotnet/whats-new-with-identity-in-dotnet-8/)
+  - [Andrea Chiarelli: Cookies, Tokens, or JWTs? The ASP.NET Core Identity Dilemma](https://auth0.com/blog/cookies-tokens-jwt-the-aspnet-core-identity-dilemma/)
 - Support for Native AOT
   - Only a partial support, available for [some templates](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-3/#native-aot-ready-project-templates)
   - [Top-level APIs annotated for trim warnings](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-4/#asp-net-core-top-level-apis-annotated-for-trim-warnings)
@@ -997,6 +1005,7 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Jon Hilton: How to migrate your Blazor Server apps to .NET 8](https://jonhilton.net/blazor-net8-migration/)
   - [Jon Hilton: .NET 8's Release Candidate Delivers a Smoother 'Out-of-the-Box' Experience for Blazor](https://www.telerik.com/blogs/net-8-release-candidate-delivers-smoother-out-box-experience-blazor)
   - [Rockford Lhotka: Flowing State in Blazor 8](https://blog.lhotka.net/2023/10/27/Flowing-State-in-Blazor-8)
+  - [Dustin Moris: .NET Blazor](https://dusted.codes/dotnet-blazor)
 - (Just) Blazor
   - Previously "Blazor United" or "Full stack web UI with Blazor"
   - [Announcement 1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-preview-1/#full-stack-web-ui-with-blazor)
@@ -1175,6 +1184,8 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-rc1/#androidstripilafteraot-mode-on-android)
 - XCode 15 support
   - [Announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-in-dotnet-8-rc-1/#xcode-15-support)
+ - Improvements and changes in Android resource generation in .NET 8
+   - [Announcement](https://devblogs.microsoft.com/dotnet/android-resource-designer-dotnet-8/)
 
 ## gRPC
 
@@ -1196,11 +1207,13 @@ A new proposals for C# features are available in [the C# language GitHub reposit
 ## .NET Aspire
 
 - A cloud ready stack for building observable, production ready, distributed applications
+- Includes: Dashboard, components, orchestration, templates, and tooling support
 - In Preview, GA release expected in the spring 2024.
 - Announcements, blog posts and documentation
   - [Documentation](https://learn.microsoft.com/en-us/dotnet/aspire/get-started/aspire-overview)
   - [GitHub](https://github.com/dotnet/aspire)
   - [Glenn Condron: Introducing .NET Aspire - Simplifying Cloud-Native Development with .NET 8](https://devblogs.microsoft.com/dotnet/introducing-dotnet-aspire-simplifying-cloud-native-development-with-dotnet-8/)
+  - [Almir Vuk: .NET Aspire - Cloud-Native App Development with Microsoft's Latest Project](https://www.infoq.com/news/2023/11/dotnet-aspire/)
 
 ## Desktop
 
@@ -1343,6 +1356,12 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - Using TorchSharp for Object Detection
   - Upgraded libraries used to latest version
   - Compiled with .NET 8
+- ML.NET 3.0 released November 22nd 2023
+  - [Announcement 1](https://devblogs.microsoft.com/dotnet/announcing-ml-net-3-0/)
+  - [Announcement 2](https://github.com/dotnet/machinelearning/releases/tag/v3.0.0)
+  - Deep Learning improvements
+  - Intel oneDAL training acceleration
+  - Tensor primitives integration
 
 ### SynapseML for .NET
 
@@ -1572,6 +1591,35 @@ A new proposals for C# features are available in [the C# language GitHub reposit
   - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-preview-3-is-here/)
   - Update notification
   - Upgraded Microsoft.Data.SQLClient from 3.0 to 5.0 in SQL Server Data Tools
+- Visual Studio 2022 17.8
+  - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-17-8-now-available/)
+  - GitHub Copilot available as an optional component (requires subscription)
+  - Create a Pull Request
+    - [Announcement](https://devblogs.microsoft.com/visualstudio/create-a-pull-request/)
+  - Performance enhancements
+    - [Announcement](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-8-performance-enhancements/)
+    - Responsive file opening experience
+    - Improved Razor/Blazor responsiveness
+    - Enhanced F5 speed
+    - Build time acceleration for non-SDK style .NET Framework projects
+  - Improved F# code fixes and autocompletion
+  - .NET counters supported during debugging sessions
+- Visual Studio 2022 17.9 Preview 1
+  - [Announcement](https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-17-9-preview-1-is-here/)
+  - Generated git commit messages (using GitHub Copilot)
+  - Event handler leaks insights
+  - Non-modal debug visualizers
+  - Instrumentation tool "Start with collection pause" option
+  - Switch between single and multiple rows in the document well
+  - .NET/C#
+    - Automatic deoptimization
+    - Razor snippets
+    - Multi-TFM (targeting frawork monikers) support
+    - Blazor scaffolding for .NET 8 projects
+  - Extensibility improvements
+    - vsconfig file  support for extensions
+  - UI refresh preview and tinted themes
+    - [Announcement](https://devblogs.microsoft.com/visualstudio/the-visual-studio-ui-refresh-preview-is-here/)
 
 ## Visual Studio Code
 
