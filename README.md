@@ -85,7 +85,7 @@ The older sample covering .NET 6 and .NET 7 is available in [another repository]
 ## Presentations
 
 - [May 2023, Thrive Conference 2023](./2023-05-thrive-what-is-new-in-dotnet-world.pptx)
-- ~~TODO: [November 2023, Advanced Technology Days 18](./2023-11-atd-what-is-new-in-dotnet-world.pptx)~~
+- [November 2023, Advanced Technology Days 18](./2023-11-atd-what-is-new-in-dotnet-world.pptx)
 
 ## Languages
 
